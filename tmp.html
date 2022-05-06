@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<title>Test</title>
+<link rel="stylesheet" href="styles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="code.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+
+    <style>
+
+#res{
+    margin: auto;
+    width: 100%;
+    text-align: left;
+}
+.main{
+    width: 70%;
+    margin: auto;
+  
+}
+li{
+    color: blue;
+}
+
+    </style>
+    
+</head>
+<body>
+<div class="main">
+   <ul id="list">
+       <li><span>Clothes</span><button>+</button></li>
+         <ul>
+            <li><span>T-Shirts</span><button>+</button></li>
+            <li><span>Trousers</span><button>+</button></li>
+             
+         </ul>
+       <li><span>Electronics</span><button>+</button></li>
+       <ul>
+        <li><span>Mobiles</span><button>+</button></li>
+        <li><span>Tabs</span><button>+</button></li>
+         
+     </ul>
+   </ul>
+</div>
+<br><br><br>
+<label for="new">New Category name:</label>
+<input type="text" id="new">
+
+<script>
+
+
+
+
+
+
+
+
+$(document).ready(function(){ 
+    
+
+    $("button").click(function() {
+        var p=$("#new").val();
+        
+        $(this).parent().parent().append("<li>"+p+"</li><button>+</button>");
+      
+    
+    
+});
+     
+});
+
+</script>
+
+</body>
+</html>
